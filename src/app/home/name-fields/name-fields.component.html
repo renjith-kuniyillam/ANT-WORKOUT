@@ -1,0 +1,37 @@
+<div [formGroup]="nameFormGroup">
+<div nz-row>
+    <div nz-col nzSpan="12">
+        <nz-form-label [nzNoColon]="true" [nzSm]="6" [nzXs]="24" nzRequired nzFor="firstname">Firstname
+        </nz-form-label>
+    </div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="12">
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+            <input formControlName="firstname" nz-input id="firstname" />
+        </nz-form-control>
+    </div>
+</div>
+<div nz-row>
+    <div class="validation-error-container" nz-col nzSpan="12">
+        <p *ngIf="isRequiredFailed('firstname')">First Name is required</p>
+    </div>
+</div>  
+<div nz-row>
+    <div nz-col nzSpan="12">
+        <nz-form-label [nzNoColon]="true" [nzSm]="6" [nzXs]="24" nzRequired nzFor="lastname">Lastname
+        </nz-form-label>
+    </div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="12">
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+            <input formControlName="lastname" nz-input id="lastname" />
+        </nz-form-control>
+    </div>
+</div>
+<div nz-row>
+    <div class="validation-error-container" nz-col nzSpan="12">
+        <p *ngIf="isRequiredFailed('lastname')">Last Name is required</p>
+    </div>
+</div> 

@@ -1,0 +1,119 @@
+<nz-collapse>
+    <nz-collapse-panel nzHeader="Book Court" nzActive="true">
+        <form nz-form [formGroup]="bookCourtForm" (ngSubmit)="submitForm()">
+            <!-- <div nz-row>
+                <div nz-col nzSpan="12">
+                    <nz-form-label [nzNoColon]="true" [nzSm]="6" [nzXs]="24" nzRequired nzFor="firstname">Firstname
+                    </nz-form-label>
+                </div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="12">
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input formControlName="firstname" nz-input id="firstname" />
+                    </nz-form-control>
+                </div>
+            </div>
+            <div nz-row>
+                <div class="validation-error-container" nz-col nzSpan="12">
+                    <p *ngIf="isRequiredFailed('firstname')">First Name is required</p>
+                </div>
+            </div>  
+            <div nz-row>
+                <div nz-col nzSpan="12">
+                    <nz-form-label [nzNoColon]="true" [nzSm]="6" [nzXs]="24" nzRequired nzFor="lastname">Lastname
+                    </nz-form-label>
+                </div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="12">
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input formControlName="lastname" nz-input id="lastname" />
+                    </nz-form-control>
+                </div>
+            </div>
+            <div nz-row>
+                <div class="validation-error-container" nz-col nzSpan="12">
+                    <p *ngIf="isRequiredFailed('lastname')">Last Name is required</p>
+                </div>
+            </div>  -->
+            <app-name-fields [nameFormGroup]="bookCourtForm.get('nameGroup')"></app-name-fields>
+            
+            <div nz-row>
+                <div nz-col nzSpan="12">
+                    <nz-form-label [nzNoColon]="true" [nzSm]="6" [nzXs]="24" nzRequired nzFor="data">Date
+                    </nz-form-label>
+                </div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="12">
+                    <!-- nzValidateStatus="success" -->
+                    <nz-form-control [nzSpan]="24" nzHasFeedback>
+                        <nz-date-picker formControlName="selectedDate"></nz-date-picker>
+                    </nz-form-control>
+                </div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="3">
+                    <div nz-row>
+                        <div nz-col nzSpan="24">
+                            <nz-form-label [nzNoColon]="true" [nzSm]="6" [nzXs]="24" nzRequired nzFor="data">From
+                            </nz-form-label>
+                        </div>
+                    </div>
+                    <div nz-row>
+                        <div nz-col nzSpan="24">
+                            <nz-form-control [nzSpan]="24" nzHasFeedback>
+                                <nz-time-picker formControlName="fromTime"></nz-time-picker>
+                            </nz-form-control>
+                        </div>
+                    </div>
+                </div>
+                <div nz-col nzSpan="3">
+                    <div nz-row>
+                        <div nz-col nzSpan="24">
+                            <nz-form-label [nzNoColon]="true" [nzSm]="24" [nzXs]="24" nzRequired nzFor="data">To
+                            </nz-form-label>
+                        </div>
+                    </div>
+                    <div nz-row>
+                        <div nz-col nzSpan="24">
+                            <nz-form-control [nzSpan]="24" nzHasFeedback>
+                                <nz-time-picker formControlName="toTime"></nz-time-picker>
+                            </nz-form-control>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="12">
+                    <div nz-row>
+                        <div nz-col nzSpan="24">
+                            <nz-form-label [nzNoColon]="true" [nzSm]="24" [nzXs]="24" nzRequired nzFor="data">No of
+                                Persons
+                            </nz-form-label>
+                        </div>
+                    </div>
+                    <div nz-row>
+                        <div nz-col nzSpan="24">
+                            <nz-select formControlName="peopleCount" nzSpan="24">
+                                <nz-option nzValue="1" nzLabel="1"></nz-option>
+                                <nz-option nzValue="2" nzLabel="2"></nz-option>
+                                <nz-option nzValue="3" nzLabel="3"></nz-option>
+                                <!-- <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option> -->
+                            </nz-select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-row-gutter" nz-row nzGutter="16">
+                <div nz-col nzSpan="3">
+                    <button type="submit" nz-button nzType="primary">BOOK</button>
+                </div>
+                <div nz-col nzSpan="3">
+                    <button nz-button type="button" nzType="default">CANCEL</button>
+                </div>
+            </div>
+        </form>
+    </nz-collapse-panel>
+</nz-collapse>
