@@ -1,0 +1,13 @@
+<nz-card style="width:100%;height: 100%;" nzTitle="Source Component">
+    <p>Can navigate to desination component</p>
+    <div nz-row>
+        <div style="padding:1%;" nz-col nzSpan="8">
+            <nz-switch [(ngModel)]="switchValue" (ngModelChange)="switchChange($event)"></nz-switch>
+        </div>
+    </div>
+    <div nz-row>
+        <div style="padding:1%;" nz-col nzSpan="8">
+            <button nz-button type="button" (click)="goToDestination()" nzType="primary">Navigate to Destination</button>
+        </div>
+    </div>
+</nz-card>

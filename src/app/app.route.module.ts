@@ -6,8 +6,12 @@ const appRoutes: Routes = [
     {
         path: 'home',
         loadChildren: () => import ("./home/home.module").then(m => m.HomeModule)
-        // loadChildren: './home/home.module#HomeModule'
+    },
+    {
+        path: 'routing-guard-example',
+        loadChildren: () => import ("./routing-with-guard/routing-with-guard.module").then(m => m.RoutingWithGuardModule)
     }
+
 ];
 
 @NgModule({
